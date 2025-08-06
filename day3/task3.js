@@ -74,7 +74,7 @@ for (var i = 0; i < students.length; i++) {
     delete students[i].isGraduated;
 }
 
-// 6. Display final information
+// Q6
 console.log("\n Student Information ");
 
 
