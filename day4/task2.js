@@ -11,15 +11,15 @@ function startCountdown() {
     var countdownInterval = setInterval(function() {
         console.log(count);
         
-        // Decrease the counter
+    
         count--;
         
-        // When countdown reaches 0, display message and stop interval
+    
         if (count < 0) {
             console.log("Time's up!");
             clearInterval(countdownInterval);
         }
-    }, 1000); // Execute every 1 second
+    }, 1000); 
 }
 
 startCountdown();
@@ -33,7 +33,7 @@ function startLimitedCountdown() {
         count--;
     }, 1000);
     
-    // Stop the interval after 5 seconds regardless of count value
+    
     setTimeout(function() {
         clearInterval(limitedCountdownInterval);
         
