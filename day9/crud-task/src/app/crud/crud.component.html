@@ -1,0 +1,32 @@
+<h1> CRUD project </h1>
+<div class="input">
+    <input type="text" [(ngModel)]="name" placeholder="name" size="40">
+    <input type="text" [(ngModel)]="description" placeholder="description" size="40">
+    <input type="text" [(ngModel)]="category" placeholder="category" size="40">
+    <button (click)="addProduct()">{{mood === 'add' ? 'Add' : 'Update'}}</button>
+</div>
+
+<div class="content"> </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of product; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.category}}</td>
+            <td>
+                <button (click)="updateData(i)">Update</button>
+                <button (click)="deleteData(i)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
