@@ -1,0 +1,30 @@
+<div class="row" *ngIf="student; else noStudent">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4>{{ student.name }} - Details</h4>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p><strong>ID:</strong> {{ student.id }}</p>
+                    <p><strong>Name:</strong> {{ student.name }}</p>
+                    <p><strong>Age:</strong> {{ student.age }}</p>
+                    <p><strong>Major:</strong> {{ student.major }}</p>
+                    <p><strong>GPA:</strong> {{ student.gpa }}</p>
+                </div>
+
+                <div class="mb-3">
+        
+                    <a routerLink="/students/list" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #noStudent>
+    <div class="alert alert-danger">
+        Student not found!
+        <a routerLink="/students/list" class="btn btn-primary mt-2">Back to Student List</a>
+    </div>
+</ng-template>
